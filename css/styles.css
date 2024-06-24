@@ -329,14 +329,15 @@ img {
 }
 
 .ourteam-list {
-  background-color: #ffffff;
-  width: calc((100% - 72px)/4);
-  box-shadow:
-    0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 2px 1px rgba(46, 47, 66, 0.08);
-  border-radius: 0 0 4px 4px;
-}
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 0 0 4px 4px;
+    height: 428px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+      0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  }
 
 .container-team {
   padding: 32px 0px;
@@ -789,4 +790,70 @@ img {
 .modal-btn:hover,
 .modal-btn:focus {
   background-color: #404bbf;
+}
+
+@media (max-width:1158px) and (min-width:768px){
+  .container{
+    width:768px;
+  }
+    .logo-link {
+      
+      font-size: 18px;
+      text-transform: uppercase;
+      margin-right: 120px;
+    }
+  .contact{
+    margin-left:121px;
+    display:inline-block;
+    margin-right: 16px;
+  }
+  .contacts{
+    font-size: 12px;
+  }
+    .section-button {
+      padding: 112px 0;
+      margin: 0 auto;
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/office.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      max-width: 1440px;
+      
+  }
+  .icons-aboutus{
+    display: none;
+  }
+  .ul-aboutus{
+    display: flex;
+      flex-wrap: wrap;
+      column-gap: 24px;
+      row-gap: 72px;
+  }
+    .li-aboutus {
+      width: calc((100% - 24px) / 2);
+    }
+    .aboutus-listheader{
+      font-weight: 700px;
+      font-size: 36px;
+      letter-spacing: 0.02em;
+    }
+    .aboutus-paragraph{
+      font-weight: 500px;
+        font-size: 16px;
+        letter-spacing: 0.02em;
+        line-height: 24px;
+    }
+        .ourteam-ul {
+          display: flex;
+            flex-wrap: wrap;
+            column-gap: 24px;
+            row-gap: 64px;
+          
+        }
+        .ourteam-list:not(:last-child) {
+          margin-bottom: 72px;}
+        .ourteam-list{
+          width: calc((100% - 24px) / 2);
+}
 }
